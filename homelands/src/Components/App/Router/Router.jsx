@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { Houses } from '../../Pages/Houses'
-import { Login } from '../../Pages/Login'
+import { Login } from '../../Pages/Login/Login'
 import { Home } from '../../Pages/Homepage/Home'
 
 

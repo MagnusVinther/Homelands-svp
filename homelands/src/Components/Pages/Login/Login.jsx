@@ -1,8 +1,9 @@
 import React from 'react'
-import { Layout } from '../App/Layout/Layout'
+import { Layout } from '../../App/Layout/Layout'
 import { useForm } from 'react-hook-form'
 import axios from 'axios'
-import { useAuth } from '../App/Auth/Auth'
+import { useAuth } from '../../App/Auth/Auth'
+import { Adminpage } from './Adminpage'
 
 export const Login = () => {
   const { register, handleSubmit, formState: { errors }} = useForm()
@@ -28,43 +29,55 @@ export const Login = () => {
     }
 
     return (
-      <Layout title="Login" description="Loginside">
+      <div className="loginContainer">
+
         {/* Laver en ternary operator som holder øje med om man er logget ind. */}
         {!loginData && !loginData.username ? (
           // loginform
+
+      <Layout title="Login" description="Loginside">
+          <>
+          <p>Indtast dit brugernavn og din adgangskode for at logge ind</p>
+
           <form onSubmit={handleSubmit(sendLoginRequest)}>
+
             <div>
-                <label htmlFor="username">Brugernavn: </label>
-                <input type="text" id="username" placeholder="Indtast Brugernavn"
+                <input type="text" id="username" placeholder="Brugernavn"
                 {...register("username", { required: true})} />
                 {errors.username && (
                   <span>Du skal indtaste dit brugernavn</span>
                 )}
             </div>
+
             <div>
-                <label htmlFor="password">Adgangskode: </label>
-                <input type="password" id="password" placeholder="Indtast Adgangskode"
+                <input type="password" id="password" placeholder="Adgangskode"
                 {...register("password", { required: true})} />
                 {errors.password && (
                   <span>Du skal indtaste din adgangskode!</span>
                 )}
             </div>
+
             <div>
               <button>Send</button>
             </div>
 
           </form>
+        </>
+      </Layout>
 
         ) : (
           //viser dette hvis man er logget ind.
             <div>
-              <p>
-                Du er logget ind som {loginData.username}
-              </p>
-              <button onClick={logOut}>Log ud</button>
+              <Layout title="Administration" description="en side til admin">
+                <Adminpage />
+                  <hr />
+                  <p><i>du er logget ind som {loginData.username}</i></p>
+                  <button className="btnStyle" onClick={logOut}>Log ud</button>
+              </Layout>
             </div>
         )}
-      </Layout>
+
+      </div>
     )
   }
 

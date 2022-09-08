@@ -10,9 +10,7 @@ function App() {
     <BrowserRouter>
       <div className='siteContainer'>
         <Header />
-          <Main>
-
-          </Main>
+        <Main />
         <Footer />
       </div>
     </BrowserRouter>

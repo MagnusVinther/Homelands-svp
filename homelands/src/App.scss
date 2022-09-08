@@ -2,22 +2,54 @@
 @import './Assets/Styles/variables.scss';
 
 .mainContainer {
-    width: 100%;
-    margin: auto;
+    @include pageContain;
 }
 
 .homeContainer {
-    width: 100%;
-    margin: auto;
+    @include pageContain;
     img {
         margin-top: -3.2em;
         width: 100%;
         height: 105%;
     }
-    .innerContainer {
-        width: 95%;
-        margin: auto;
+}
+
+.btnStyle {
+    @include defaultBtn;
+}
+
+.loginContainer {
+    @include innerContain;
+    height: 100%;
+
+    section {
+        width: 50%;
+        height: 100%;
+        margin-bottom: 5%;
+
+        form {
+            height: 20vh;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+
+            input {
+                height: 50%;
+            }
+
+            div {
+                display: grid;
+                grid-template-columns: 50%;
+            }
+            button {
+                margin: auto 0;
+                @include defaultBtn;
+            }
+        }
     }
+}
+
+.innerContainer {
+    @include innerContain;
 }
 
 .headerContainer {
