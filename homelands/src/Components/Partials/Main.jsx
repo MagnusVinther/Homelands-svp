@@ -1,9 +1,12 @@
 import React from 'react'
+import { AppRouter } from '../App/Router/Router'
 
 export const Main = () => {
   return (
-    <main>
-        <p>Her er min mainpage</p>
+    <main className='mainContainer'>
+        <AppRouter>
+            
+        </AppRouter>
     </main>
   )
 }

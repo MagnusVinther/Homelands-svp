@@ -1,2 +1,117 @@
 @import './Assets/Styles/mixins.scss';
 @import './Assets/Styles/variables.scss';
+
+.mainContainer {
+    width: 100%;
+    margin: auto;
+}
+
+.homeContainer {
+    width: 100%;
+    margin: auto;
+    img {
+        margin-top: -3.2em;
+        width: 100%;
+        height: 105%;
+    }
+    .innerContainer {
+        width: 95%;
+        margin: auto;
+    }
+}
+
+.headerContainer {
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    clip-path: polygon(100% 0, 100% 100%, 30% 60%, 0 100%, 0 0);
+    
+    .headerLogo {
+        position: relative;
+        color: white;
+        font-family: 'calibri';
+        margin: 1em;
+        
+        
+        h3 {
+            z-index: 50;
+            width: 40%;
+            background-color: rgb(165, 95, 42);
+            border: 2px solid black;
+            object-fit: contain;
+            text-align: center;
+            margin: .5em;
+            font-size: 2.5em;
+            
+        }
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-around;
+        font-size: 1em;
+        margin: auto 0;
+
+        a {
+            text-decoration: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            color: white;
+            font-family: 'calibri';
+
+            &:hover {
+                color: burlywood;
+            }
+
+        }
+        
+        input {
+            height: 40%;
+        }
+    }
+    
+}
+
+footer {
+    background-color: black;
+    color: white;
+    font-family: 'calibri';
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    .footerContainer-1 {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+
+    }
+
+    .footerIcons {
+        width: 20%;
+        display: flex;
+        justify-content: flex-end;
+        padding-left: 40%;
+       
+        svg {
+            height: 100%;
+            width: 3vw;
+            padding-left: 10%;
+        }
+    }
+
+    h3 {
+        font-size: 3.5vh;
+    }
+
+    p {
+        font-size: 1.3vh;
+        line-height: .5;
+    }
+
+    div {
+        margin: auto;
+    }
+
+}

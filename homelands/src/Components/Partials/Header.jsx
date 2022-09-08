@@ -1,12 +1,14 @@
 import React from 'react'
+import { Navbar } from './Navbar'
 
 export const Header = () => {
   return (
-    <header>
-        <p>Forside</p>
-        <p>Boliger til salg</p>
-        <p>Login</p>
-        <input type="search" id="query" name="q" placeholder="Search..." />
+    <header className='headerContainer'>
+        <div className='headerLogo'>
+            <h3>HomeLands</h3>
+        </div>
+        <Navbar />
     </header>
   )
 }
+
