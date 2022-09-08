@@ -1,6 +1,6 @@
 import React from 'react'
-import { Layout } from '../App/Layout/Layout'
-import image1 from '../../Assets/Images/homelandshero.jpg'
+import { Layout } from '../../App/Layout/Layout'
+import image1 from '../../../Assets/Images/homelandshero.jpg'
 
 export const Home = () => {
   return (

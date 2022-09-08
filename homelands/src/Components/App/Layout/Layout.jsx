@@ -10,7 +10,7 @@ export const Layout = props => {
             document.querySelector('meta[name="description"]')
             .setAttribute('content', props.description)
         }
-    }, [props.title, props.desription])
+    }, [props.title, props.description])
 
   return (
     <>
