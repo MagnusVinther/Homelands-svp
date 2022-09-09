@@ -43,13 +43,15 @@ export const HouseList = () => {
                       <figcaption>
                         <article>
                           <h4>{favs.address}</h4>
-                          <p>{favs.zipcode} {favs.city}</p>
-                          <p>{favs.type}</p>
 
                           <span>
+                            <p><b>{favs.zipcode} {favs.city}</b></p>
+                            <p>{favs.type}</p>
+                          </span>
+
+                          <span className="horiSpan">
                             <p>{favs.energy_label_name}</p>
-                            <p>{favs.num_rooms} værelser</p>
-                            <p>{favs.floor_space} &#13217;</p>
+                            <p>{favs.num_rooms} værelser, {favs.floor_space} &#13217;</p>
                             <p><b>{favs.price}</b> DKK</p>
                           </span>
                         </article>

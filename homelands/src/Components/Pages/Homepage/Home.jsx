@@ -6,7 +6,7 @@ import { HouseList } from './HouseList'
 export const Home = () => {
   return (
     <div className='homeContainer'>
-      <img src={image1} alt="heroimg" />
+      <img src={image1} alt="heroimg" className='heroImg' />
       <div className='innerContainer'>
         <Layout title="Forside" description="Forside til HomeLands">
 
