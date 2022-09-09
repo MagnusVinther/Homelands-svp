@@ -1,6 +1,7 @@
 import React from 'react'
 import { Layout } from '../../App/Layout/Layout'
 import image1 from '../../../Assets/Images/homelandshero.jpg'
+import { HouseList } from './HouseList'
 
 export const Home = () => {
   return (
@@ -9,7 +10,7 @@ export const Home = () => {
       <div className='innerContainer'>
         <Layout title="Forside" description="Forside til HomeLands">
 
-          
+          <HouseList />
           <p>her er min homepage!</p>
 
         </Layout>
